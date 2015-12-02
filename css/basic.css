@@ -1,0 +1,189 @@
+/*
+    Palette
+    (from Google's Material Design palette)
+
+    red     #F44336
+    black   #222222
+    white   #EEEEEE
+*/
+
+
+*, :before, :after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition-duration: 300ms;
+    transition-property: none;
+}
+
+/* body */
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+    font-family: "Roboto", "Noto Sans", sans-serif;
+    font-size: 17px;
+
+    background-color: #222222;
+    color: #EEEEEE;
+}
+
+/* headers */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Archivo Black", sans-serif;
+    letter-spacing: 0.05em;
+    margin: 0.5em 0;
+}
+
+h1 {
+    font-size: 5em;
+    letter-spacing: initial;
+    line-height: 1.3;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.7em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.3em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+/* links */
+
+a {
+    color: #F44336;
+    box-shadow: inset 0 -2px #F44336;
+
+    transition-property: color, box-shadow;
+}
+
+a:hover {
+    color: #EEEEEE;
+    box-shadow: inset 0 -100% #F44336;
+}
+
+/* paragraphs */
+
+p {
+    line-height: 1.5;
+    margin: 0.5em 0;
+}
+
+/* sections */
+
+header, section {
+    padding: 2em;
+}
+
+.content {
+    position: relative;
+}
+
+section {
+    position: relative;
+    width: calc(100% - 350px);
+}
+
+.sidebar {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 350px;
+}
+
+/* hero */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.hero .hero_text {
+    position: relative;
+
+    width: 900px;
+    max-width: 100%;
+
+    z-index: 1;
+}
+
+.hero .tagline {
+    font-size: 2em;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.hero h1, .hero .tagline {
+    margin-left: 0.25em;
+}
+
+.hero h1 span, .hero .tagline span {
+    display: inline;
+
+    background-color: #222222;
+    box-shadow: -0.25em 0 #222222, 0.25em 0 #222222;
+}
+
+.hero .hero_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.hero .hero_background > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    min-width: 100%;
+    min-height: 100%;
+}
+
+/* navigation */
+
+.nav {
+    padding: 0.5em 2em;
+}
+
+.nav_title {
+    font-size: 1.5em;
+    font-family: "Roboto", "Noto Sans", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
