@@ -179,10 +179,25 @@ section {
     min-height: 100%;
 }
 
+/* buttons */
+
+button {
+    border-radius: 4px;
+    background: rgba(127, 127, 127, 0.7);
+    padding: 0.7em;
+    border: none;
+}
+
 /* navigation */
 
 .nav {
+}
+
+.nav_container {
     padding: 0.5em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .nav_title {
@@ -190,4 +205,9 @@ section {
     font-family: "Roboto", "Noto Sans", sans-serif;
     font-weight: 700;
     letter-spacing: 0.1em;
+}
+
+.nav button {
+    background: transparent;
+    color: #EEEEEE;
 }
