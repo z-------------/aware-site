@@ -3,10 +3,16 @@
     (from Google's Material Design palette: google.com/design/spec/style/color.html)
 
     red       #F44336
+
     yellow    #FFEB3B
+
     green     #4CAF50
+
     cyan      #00BCD4
+
     blue      #2196F3
+    blue300   #64B5F6
+
     pink      #E91E63
 
     grey200   #EEEEEE
@@ -195,6 +201,7 @@ section h2 {
 .hero .tagline {
     font-size: 1.5em;
     font-weight: 300;
+    color: inherit;
 
     text-shadow: 0.07em 0.07em rgba(0, 0, 0, 0.3);
 }
@@ -257,6 +264,8 @@ button {
 .nav_title {
     font-size: 1.5em;
     letter-spacing: 0.15em;
+
+    color: #64B5F6;
 }
 
 .nav button {
@@ -282,5 +291,128 @@ button {
     align-items: center;
 
     background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+/* timeline */
+
+.timeline {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+}
+
+.timeline_axis {
+    width: 0.5em;
+    border-radius: 4px;
+
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.timeline_dates {
+    padding: 2em;
+    width: 350px;
+}
+
+.timeline_dates--left {
+    text-align: right;
+    padding-right: 3em;
+}
+
+.timeline_dates--right {
+    margin-top: 5.2em;
+    padding-left: 3em;
+}
+
+.timeline_date {
+    position: relative;
+
+    margin-bottom: 7em;
+    padding: 1em;
+
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.timeline_date--highlight {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.timeline_date h6 {
+    margin-top: 0;
+}
+
+.timeline_date p {
+    margin-bottom: 0;
+}
+
+.timeline_date:last-child {
+    margin-bottom: 0;
+}
+
+.timeline_date:before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.timeline_dates--left .timeline_date:before {
+    left: 100%;
+
+    border-width: 0.7em 0 0.7em 1em;
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.1);
+}
+
+.timeline_dates--left .timeline_date--highlight:before {
+    border-color: transparent transparent transparent rgba(255, 255, 255, 0.2);
+}
+
+.timeline_dates--right .timeline_date:before {
+    right: 100%;
+
+    border-width: 0.7em 1em 0.7em 0;
+    border-color: transparent rgba(255, 255, 255, 0.1) transparent transparent;
+}
+
+.timeline_dates--right .timeline_date--highlight:before {
+    border-color: transparent rgba(255, 255, 255, 0.2) transparent transparent;
+}
+
+.timeline_date:after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    width: 1.5em;
+    height: 1.5em;
+
+    background-color: #64B5F6;
+    box-shadow: 0 0 0 0.5em #212121;
+    border-radius: 50%;
+}
+
+.timeline_dates--left .timeline_date:after {
+    left: calc(100% + 3.23em);
+}
+
+.timeline_dates--right .timeline_date:after {
+    right: calc(100% + 1.77em);
+}
+
+/* footer */
+
+footer {
+    font-size: 0.8em;
+    background-color: #171717;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5em;
     text-align: center;
 }
