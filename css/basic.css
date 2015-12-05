@@ -103,15 +103,48 @@ h6 {
 /* links */
 
 a {
-    color: #F44336;
-    box-shadow: inset 0 -2px #F44336;
+    color: #64B5F6;
+    box-shadow: inset 0 -2px #64B5F6;
+    overflow: hidden;
 
-    transition-property: color, box-shadow;
+    transition-property: color, box-shadow, background;
 }
 
 a:hover {
     color: #EEEEEE;
-    box-shadow: inset 0 -100% #F44336;
+    box-shadow: inset 0 -1.5em #64B5F6;
+}
+
+a.big-button {
+    display: inline-block;
+    font-size: 1.5em;
+    box-shadow: none;
+    box-shadow: 0 0 0 1px #64B5F6;
+    border-radius: 4px;
+    padding: 0.5em 0.7em;
+}
+
+a.big-button:before {
+    content: "file_download";
+    font-family: "Material Icons" !important;
+    color: #EEEEEE;
+    vertical-align: middle;
+    margin-right: 0.2em;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: "liga";
+}
+
+a.big-button:hover {
+    background-color: #64B5F6;
 }
 
 /* strongs and ems */
@@ -144,6 +177,10 @@ header, section {
 
 section {
     position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     padding-left: 3.2em;
     padding-right: 3.2em;
@@ -262,10 +299,30 @@ button {
 }
 
 .nav_title {
+    position: relative;
     font-size: 1.5em;
-    letter-spacing: 0.15em;
 
     color: #64B5F6;
+
+    margin-left: 2.2em;
+}
+
+.nav_title:before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-right: 0.5em;
+
+    transform: translateY(-50%);
+
+    width: 1.7em;
+    height: 1.7em;
+
+    background-image: url("/img/esf-small.png");
+    background-size: contain;
+    background-position: center;
 }
 
 .nav button {
