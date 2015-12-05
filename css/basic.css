@@ -1,10 +1,17 @@
 /*
     Palette
-    (from Google's Material Design palette)
+    (from Google's Material Design palette: google.com/design/spec/style/color.html)
 
-    red     #F44336
-    black   #222222
-    white   #EEEEEE
+    red       #F44336
+    yellow    #FFEB3B
+    green     #4CAF50
+    cyan      #00BCD4
+    blue      #2196F3
+    pink      #E91E63
+
+    grey200   #EEEEEE
+    grey300   #E0E0E0
+    grey900   #212121
 */
 
 
@@ -25,13 +32,24 @@
     transition-property: none;
 }
 
+/* animation keyframes */
+
+@keyframes cmy-bg {
+    0% { background-color: #00BCD4; }
+    33% { background-color: #E91E63; }
+    67% { background-color: #FFEB3B; }
+    100% { background-color: #00BCD4; }
+}
+
 /* body */
 
 body {
     box-sizing: border-box;
     overflow-x: hidden;
 
-    font-family: "Roboto", "Noto Sans", sans-serif;
+    margin-top: 75.5px;
+
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 17px;
 
     background-color: #222222;
@@ -90,11 +108,22 @@ a:hover {
     box-shadow: inset 0 -100% #F44336;
 }
 
+/* strongs and ems */
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
 /* paragraphs */
 
 p {
     line-height: 1.5;
     margin: 0.5em 0;
+    color: #E0E0E0;
 }
 
 /* sections */
@@ -109,7 +138,13 @@ header, section {
 
 section {
     position: relative;
-    width: calc(100% - 350px);
+
+    padding-left: 3.2em;
+    padding-right: 3.2em;
+}
+
+section h2 {
+    text-align: center;
 }
 
 .sidebar {
@@ -127,6 +162,11 @@ section {
     position: relative;
     overflow: hidden;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     padding-top: 5em;
     padding-bottom: 5em;
 }
@@ -137,24 +177,30 @@ section {
     width: 900px;
     max-width: 100%;
 
+    color: #FFFFFF;
+
     z-index: 1;
 }
 
-.hero .tagline {
-    font-size: 1.7em;
-    font-weight: 300;
-    line-height: 1.2;
-}
-
 .hero h1, .hero .tagline {
-    margin-left: 0.25em;
+    display: block;
 }
 
-.hero h1 span, .hero .tagline span {
-    display: inline;
+.hero h1 {
+    line-height: 1;
 
-    background-color: #222222;
-    box-shadow: -0.25em 0 #222222, 0.25em 0 #222222;
+    text-shadow: 0.07em 0.07em rgba(0, 0, 0, 0.3);
+}
+
+.hero .tagline {
+    font-size: 1.5em;
+    font-weight: 300;
+
+    text-shadow: 0.07em 0.07em rgba(0, 0, 0, 0.3);
+}
+
+.hero .tagline strong {
+    font-weight: 400;
 }
 
 .hero .hero_background {
@@ -167,6 +213,8 @@ section {
     pointer-events: none;
 
     z-index: 0;
+
+    animation: cmy-bg 10s linear infinite;
 }
 
 .hero .hero_background > * {
@@ -191,6 +239,12 @@ button {
 /* navigation */
 
 .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(33, 33, 33, 0.7);
+    z-index: 999999;
 }
 
 .nav_container {
@@ -202,12 +256,31 @@ button {
 
 .nav_title {
     font-size: 1.5em;
-    font-family: "Roboto", "Noto Sans", sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.15em;
 }
 
 .nav button {
     background: transparent;
     color: #EEEEEE;
+}
+
+/* grid layout */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid_item {
+    width: calc(50% - 1em);
+    margin: 0.5em;
+    padding: 2em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
 }
