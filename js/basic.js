@@ -13,8 +13,6 @@ $(".timeline").each(function(i, elem) {
 
         var side = ["left", "right"][i % 2];
 
-        moment.locale("en-GB");
-
         var dateFormatted = moment(olElem.dataset.date).format("MMMM Do YYYY");
         var content = $olElem.html();
 
