@@ -115,8 +115,47 @@
                 </div>
             </section>
 
+            <section id="register">
+                <h2>Register</h2>
+                <p>Fill in this form to register your interest in taking part in this coming ESF Film Festival. We will email you when we launch.</p>
+
+                <form id="form--register">
+                    <label>
+                        <span>Name</span>
+                        <input required type="text" data-form-field="name">
+                    </label>
+                    <label>
+                        <span>School</span>
+                        <input required type="text" data-form-field="school">
+                    </label>
+                    <label>
+                        <span>Role</span>
+                        <select data-form-field="role">
+                            <option>Student</option>
+                            <option>Teacher</option>
+                        </select>
+                    </label>
+                    <label data-form-showif="role=Student">
+                        <span>Year</span>
+                        <input required type="number" min="1" max="13" data-form-field="year">
+                    </label>
+                    <label>
+                        <span data-help="Please enter a valid email address. We will use it to contact you.">Email</span>
+                        <input required type="email" data-form-field="email">
+                    </label>
+                    <label>
+                        <span></span>
+                        <button>Register</button>
+                    </label>
+                    <label>
+                        <span></span>
+                        <p class="small">We will take you to Google Forms to confirm your registration.</p>
+                    </label>
+                </form>
+            </section>
+
             <section id="document">
-                <p>Learn more about the ESF Film Festival by downloading this PDF:</p>
+                <p>Learn more about the ESF Film Festival in this PDF:</p>
                 <a href="file/ESF-Film-Festival-2015.pdf" target="_blank" class="big-button">Download</a>
             </section>
         </div>
@@ -124,5 +163,7 @@
         <footer>
             <p>Copyright © 2015 AWARE. All Rights Reserved.</p>
         </footer>
+
+        <script src="js/index.js"></script>
     </body>
 </html>

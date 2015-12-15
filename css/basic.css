@@ -8,6 +8,8 @@
 
     green     #4CAF50
 
+    l green   #8BC34A
+
     cyan      #00BCD4
 
     blue      #2196F3
@@ -60,6 +62,12 @@ body {
 
     background-color: #222222;
     color: #EEEEEE;
+}
+
+/* hidden */
+
+.hidden {
+    display: none;
 }
 
 /* headers */
@@ -157,12 +165,77 @@ em {
     font-style: italic;
 }
 
+/* inputs */
+
+input, textarea {
+    color: #FFFFFF;
+
+    outline: solid 2px transparent;
+
+    transition-property: color, background, outline;
+}
+
+input:focus, textarea:focus {
+    outline-color: #EEEEEE;
+}
+
+input:not(:focus):valid, textarea:not(:focus):valid {
+    outline-color: #8BC34A;
+}
+
+input:not(:empty):invalid, textarea:not(:empty):invalid {
+    outline-color: #F44336;
+}
+
+input, textarea, select {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 0.7em 1em;
+}
+
+select {
+    height: calc(1em + 0.7em + 0.7em);
+}
+
+form {
+    margin: 1em 0;
+}
+
+form input, form textarea, form select {
+    width: 350px;
+}
+
+form label {
+    display: flex;
+
+    margin-bottom: 0.5em;
+    height: 3em;
+
+    align-items: center;
+}
+
+form label span {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 1.5em;
+}
+
+form button {
+    margin-top: 1em;
+}
+
 /* paragraphs */
 
 p {
     line-height: 1.5;
     margin: 0.5em 0;
     color: #E0E0E0;
+}
+
+p.small {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.8em;
 }
 
 /* sections */
@@ -274,10 +347,21 @@ section h2 {
 /* buttons */
 
 button {
-    border-radius: 4px;
-    background: rgba(127, 127, 127, 0.7);
-    padding: 0.7em;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.7em 1em;
     border: none;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    cursor: pointer;
+
+    transition-property: color, background;
+}
+
+button:hover {
+    background-color: #FFFFFF;
+    color: #212121;
 }
 
 /* navigation */
@@ -476,4 +560,10 @@ footer {
 
 footer p {
     color: inherit;
+}
+
+/* specific sections */
+
+#register {
+    background-color: #2196F3;
 }
