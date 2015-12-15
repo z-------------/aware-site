@@ -414,6 +414,18 @@ button:hover {
     color: #EEEEEE;
 }
 
+.nav_list {
+    display: flex;
+}
+
+.nav_list a {
+    padding: 1em;
+}
+
+.nav_list a:hover {
+    box-shadow: inset 0 -4em #64B5F6
+}
+
 /* grid layout */
 
 .grid {

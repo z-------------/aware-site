@@ -50,3 +50,12 @@ $("form").on("change", function(e) {
         }
     });
 });
+
+/* nav */
+
+$("#content section").each(function(i, elem) {
+    var sectionTitle = $(elem).find("h2").text();
+    if (sectionTitle) {
+        $(".nav_list").append("<a href='#" + $(elem).attr("id") + "'>" + sectionTitle + "</a>");
+    }
+});
