@@ -229,13 +229,18 @@ form button {
 
 p {
     line-height: 1.5;
-    margin: 0.5em 0;
+    margin: 0.7em 0;
     color: #E0E0E0;
 }
 
 p.small {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.8em;
+}
+
+section > p {
+    width: 700px;
+    max-width: 100%;
 }
 
 /* sections */
