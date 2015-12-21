@@ -573,9 +573,3 @@ footer {
 footer p {
     color: inherit;
 }
-
-/* specific sections */
-
-#register {
-    background-color: #2196F3;
-}
