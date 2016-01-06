@@ -1,0 +1,12 @@
+.hero_background {
+    background-image: url(/img/hero/camera.jpg);
+}
+
+#resources img {
+    width: 200px;
+    height: 283px;
+
+    border-radius: 4px;
+
+    margin-bottom: 1em;
+}

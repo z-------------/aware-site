@@ -1,32 +1,3 @@
-/* timeline */
-
-$(".timeline").each(function(i, elem) {
-    var $timelineElem = $(elem);
-
-    $timelineElem
-        .append($("<div class='timeline_dates timeline_dates--left'></div>"))
-        .append($("<div class='timeline_axis'>"))
-        .append($("<div class='timeline_dates timeline_dates--right'></div>"));
-
-    $timelineElem.find("ol").each(function(i, olElem) {
-        var $olElem = $(olElem);
-
-        var side = ["left", "right"][i % 2];
-
-        var dateFormatted = moment(olElem.dataset.date).format("MMMM Do YYYY");
-        var content = $olElem.html();
-
-        $dateElem = $("<ol class='timeline_date'><h6>" + dateFormatted + "</h6><p>" + content + "</p></ol>");
-        if (olElem.classList.contains("timeline_date--highlight")) {
-            $dateElem.addClass("timeline_date--highlight");
-        }
-
-        $timelineElem.find(".timeline_dates--" + side).append($dateElem);
-
-        $olElem.remove();
-    });
-});
-
 /* form */
 
 $("form").on("change", function(e) {
@@ -51,11 +22,12 @@ $("form").on("change", function(e) {
     });
 });
 
-/* nav */
+/* highlight current nav link */
 
-$("#content section").each(function(i, elem) {
-    var sectionTitle = $(elem).find("h2").text();
-    if (sectionTitle) {
-        $(".nav_list").append("<a data-scroll href='#" + $(elem).attr("id") + "'>" + sectionTitle + "</a>");
+$(".nav_list a").each(function(i, elem) {
+    var $elem = $(elem);
+
+    if (window.location.href.indexOf($elem.attr("href")) != -1) {
+        $elem.find("li").addClass("highlight");
     }
-});
+})
