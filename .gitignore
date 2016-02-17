@@ -1,1 +1,4 @@
 .DS_Store
+
+page/*.html
+index.html
