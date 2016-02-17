@@ -1,0 +1,28 @@
+block vars
+-
+    var _title = "ESF Film Festival 2016";
+    if (title) {
+        _title = title + " - " + _title;
+    }
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        
+        title= _title
+        
+        link(rel="import", href="/icons.html")
+        
+        // css
+        link(rel="import", href="/css/common.html")
+        
+        // js
+        link(rel="import", href="/js/common.html")
+        
+        // fonts
+        link(rel="import", href="/font/fonts.html")
+    body
+        include header
+        #content
+            block content
+        include footer

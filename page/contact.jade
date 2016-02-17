@@ -1,0 +1,31 @@
+extends ../jade/page
+block vars
+    - title = "Contact us"
+block content
+    include ../jade/hero
+    section#contact-us
+        p Ask us any questions and give us all suggestions!
+        form#form--register
+            label
+                span Name
+                input(required, type="text", data-form-field="name")
+            label
+                span School
+                input(required, type="text", data-form-field="school")
+            label
+                span Role
+                select(data-form-field="role")
+                    option Student
+                    option Teacher
+            label(data-form-showif="role=Student")
+                span Year
+                input(required, type="number", min="1", max="13", data-form-field="year")
+            label
+                span(data-help="Please enter a valid email address. We will use it to contact you.") Email
+                input(required, type="email", data-form-field="email")
+            label
+                span
+                button Register
+            label
+                span
+                p.small We will take you to Google Forms to confirm your message.

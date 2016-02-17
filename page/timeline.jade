@@ -1,0 +1,19 @@
+extends ../jade/page
+block vars
+    - title = "Timeline"
+block content
+    include ../jade/hero
+    section#timeline
+        .timeline
+            ol(data-date="02/01/2016")
+                | Registration open to schools and students.
+            ol.timeline_date--highlight(data-date="04/18/2016")
+                | Deadline for registrations.
+            ol(data-date="04/25/2016")
+                | Submissions open for films and photo portfolios. Invitations and tickets begin to be distributed.
+            ol.timeline_date--highlight(data-date="05/18/2016")
+                | Deadline for film and photo submissions.
+            ol(data-date="05/24/2016")
+                | Best six films are announced.
+            ol.timeline_date--highlight(data-date="06/03/2016")
+                | Night of the ESF Film Festival!
