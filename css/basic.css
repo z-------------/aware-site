@@ -48,7 +48,8 @@ body {
 
     margin-top: 75.5px;
 
-    font-family: "Source Sans Pro", sans-serif;
+    /*font-family: "Source Sans Pro", sans-serif;*/
+    font-family: "Karla", "Noto Sans", sans-serif;
     font-size: 17px;
 
     background-color: #222222;
