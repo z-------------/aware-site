@@ -436,7 +436,8 @@ button:hover {
 
 .nav_list li {
     display: block;
-    padding: 1.5em 1em;
+    padding: 1.6em 1em;
+    height: 100%;
 
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -456,6 +457,7 @@ button:hover {
 .nav_list a {
     box-shadow: none !important;
     color: inherit !important;
+    height: 100%;
 }
 
 /* grid layout */
